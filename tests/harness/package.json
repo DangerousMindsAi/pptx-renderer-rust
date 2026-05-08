@@ -1,0 +1,27 @@
+{
+  "name": "harness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@aiden0z/pptx-renderer": "file:../../../pptx-renderer",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
+    "puppeteer": "^24.43.0"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "^5.7.3",
+    "jsdom": "^29.1.1",
+    "jszip": "^3.10.1",
+    "tsx": "^4.21.0"
+  }
+}

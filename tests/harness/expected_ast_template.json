@@ -1,0 +1,260 @@
+{
+  "width": 960,
+  "height": 720,
+  "slideCount": 3,
+  "slides": [
+    {
+      "index": 0,
+      "background": {
+        "color": "#FFFFFF"
+      },
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 72.0,
+            "y": 223.66666666666666
+          },
+          "size": {
+            "w": 816.0,
+            "h": 154.33333333333334
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Title Placeholder",
+                "runs": [
+                  {
+                    "text": "Title Placeholder",
+                    "fontSize": 44.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "ctr",
+                "bulletNone": true,
+                "spaceBefore": "0%"
+              }
+            ],
+            "totalText": "Title Placeholder"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Subtitle 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 144.0,
+            "y": 408.0
+          },
+          "size": {
+            "w": 672.0,
+            "h": 184.0
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "background": {
+        "color": "#FFFFFF"
+      },
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 48.0,
+            "y": 28.833385826771654
+          },
+          "size": {
+            "w": 864.0,
+            "h": 120.0
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Content Title",
+                "runs": [
+                  {
+                    "text": "Content Title",
+                    "fontSize": 44.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "ctr",
+                "bulletNone": true,
+                "spaceBefore": "0%"
+              }
+            ],
+            "totalText": "Content Title"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Content 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 48.0,
+            "y": 168.0
+          },
+          "size": {
+            "w": 864.0,
+            "h": 475.166719160105
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Content Placeholder",
+                "runs": [
+                  {
+                    "text": "Content Placeholder",
+                    "fontSize": 18.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "l",
+                "marginLeft": 0.0
+              }
+            ],
+            "totalText": "Content Placeholder"
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "background": {
+        "color": "#FFFFFF"
+      },
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 48.0,
+            "y": 28.833385826771654
+          },
+          "size": {
+            "w": 864.0,
+            "h": 120.0
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Two Columns Title",
+                "runs": [
+                  {
+                    "text": "Two Columns Title",
+                    "fontSize": 44.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "ctr",
+                "bulletNone": true,
+                "spaceBefore": "0%"
+              }
+            ],
+            "totalText": "Two Columns Title"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Column 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 48.0,
+            "y": 168.0
+          },
+          "size": {
+            "w": 424.0,
+            "h": 475.166719160105
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Column 1 Placeholder",
+                "runs": [
+                  {
+                    "text": "Column 1 Placeholder",
+                    "fontSize": 28.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "l",
+                "marginLeft": 0.0
+              }
+            ],
+            "totalText": "Column 1 Placeholder"
+          }
+        },
+        {
+          "id": "4",
+          "name": "Column 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 488.0,
+            "y": 168.0
+          },
+          "size": {
+            "w": 424.0,
+            "h": 475.166719160105
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Column 2 Placeholder",
+                "runs": [
+                  {
+                    "text": "Column 2 Placeholder",
+                    "fontSize": 28.0,
+                    "fontFamily": "Calibri",
+                    "kerning": 12.0
+                  }
+                ],
+                "align": "l",
+                "marginLeft": 0.0
+              }
+            ],
+            "totalText": "Column 2 Placeholder"
+          }
+        }
+      ]
+    }
+  ]
+}

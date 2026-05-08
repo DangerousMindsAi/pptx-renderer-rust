@@ -1,0 +1,218 @@
+{
+  "width": 960,
+  "height": 720,
+  "slideCount": 3,
+  "slides": [
+    {
+      "index": 0,
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 72,
+            "y": 223.66666666666669
+          },
+          "size": {
+            "w": 816,
+            "h": 154.33333333333331
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Title Placeholder",
+                "runs": [
+                  {
+                    "text": "Title Placeholder"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Title Placeholder"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Subtitle 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 144,
+            "y": 408
+          },
+          "size": {
+            "w": 672,
+            "h": 184
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 48,
+            "y": 28.833385826771654
+          },
+          "size": {
+            "w": 864,
+            "h": 120
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Content Title",
+                "runs": [
+                  {
+                    "text": "Content Title"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Content Title"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Content 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 48,
+            "y": 168
+          },
+          "size": {
+            "w": 864,
+            "h": 475.16671916010495
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Content Placeholder",
+                "runs": [
+                  {
+                    "text": "Content Placeholder"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Content Placeholder"
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "nodes": [
+        {
+          "id": "2",
+          "name": "Title 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 48,
+            "y": 28.833385826771654
+          },
+          "size": {
+            "w": 864,
+            "h": 120
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Two Columns Title",
+                "runs": [
+                  {
+                    "text": "Two Columns Title"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Two Columns Title"
+          }
+        },
+        {
+          "id": "3",
+          "name": "Column 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 48,
+            "y": 168
+          },
+          "size": {
+            "w": 424,
+            "h": 475.16671916010495
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Column 1 Placeholder",
+                "runs": [
+                  {
+                    "text": "Column 1 Placeholder"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Column 1 Placeholder"
+          }
+        },
+        {
+          "id": "4",
+          "name": "Column 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 488,
+            "y": 168
+          },
+          "size": {
+            "w": 424,
+            "h": 475.16671916010495
+          },
+          "rotation": 0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "Column 2 Placeholder",
+                "runs": [
+                  {
+                    "text": "Column 2 Placeholder"
+                  }
+                ]
+              }
+            ],
+            "totalText": "Column 2 Placeholder"
+          }
+        }
+      ]
+    }
+  ]
+}
