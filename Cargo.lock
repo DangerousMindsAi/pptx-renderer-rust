@@ -1140,6 +1140,7 @@ dependencies = [
 [[package]]
 name = "hyper-render"
 version = "0.2.2"
+source = "git+https://github.com/AGanguli/hyper-render.git#07ddbae10b668ed191dcc2ee952da46b975876e8"
 dependencies = [
  "anyrender",
  "anyrender_vello_cpu",
@@ -1842,6 +1843,7 @@ checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 [[package]]
 name = "openxml"
 version = "0.1.0"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
 dependencies = [
  "openxml-dom",
  "openxml-opc",
@@ -1850,6 +1852,7 @@ dependencies = [
 [[package]]
 name = "openxml-dom"
 version = "0.1.0"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
 dependencies = [
  "openxml-generator",
  "quick-xml 0.39.3",
@@ -1859,6 +1862,7 @@ dependencies = [
 [[package]]
 name = "openxml-generator"
 version = "0.1.0"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
 dependencies = [
  "anyhow",
  "proc-macro2",
@@ -1872,6 +1876,7 @@ dependencies = [
 [[package]]
 name = "openxml-opc"
 version = "0.1.0"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
 dependencies = [
  "zip",
 ]
