@@ -13,7 +13,7 @@ pub struct XmlNode {
 impl XmlNode {
     pub fn parse(xml: &str) -> Result<Self, String> {
         let mut reader = Reader::from_str(xml);
-        reader.config_mut().trim_text(true);
+        // reader.config_mut().trim_text(true);
         
         let mut stack = Vec::new();
         let mut root = None;
@@ -69,8 +69,11 @@ impl XmlNode {
                 }
                 Ok(Event::Text(e)) => {
                     if let Some(node) = stack.last_mut() {
-                        let txt = e.unescape().unwrap_or_default().to_string();
-                        if !txt.trim().is_empty() {
+                        let mut txt = e.unescape().unwrap_or_default().to_string();
+                        if node.tag != "a:t" && node.tag != "p:t" {
+                            txt = txt.trim().to_string();
+                        }
+                        if !txt.is_empty() {
                             if let Some(ref mut existing) = node.text {
                                 existing.push_str(&txt);
                             } else {

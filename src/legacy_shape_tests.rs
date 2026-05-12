@@ -27,7 +27,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         // assert!(!html.contains("none"));
         assert!(html.contains("#4472C4"));
@@ -62,7 +62,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
         assert!(html.contains("#4472C4"));
@@ -103,7 +103,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("#4472C4"));
         assert!(html.contains("none"));
@@ -138,7 +138,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -169,7 +169,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -200,7 +200,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -238,7 +238,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("M"));
         assert!(html.contains("Z"));
@@ -274,7 +274,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(!html.contains("nowrap"));
     }
@@ -311,7 +311,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("rotate(180deg)"));
     }
@@ -341,7 +341,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("evenodd"));
     }
@@ -376,7 +376,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -412,7 +412,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("hidden"));
     }
@@ -438,7 +438,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -463,7 +463,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("#FF0000"));
         assert!(html.contains("#0000FF"));
@@ -490,7 +490,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
     }
@@ -516,7 +516,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -541,7 +541,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -565,7 +565,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("#4472C4"));
     }
@@ -595,7 +595,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         println!("HTML OUTPUT: {}", html);
         assert!(!html.is_empty());
         // assert!(!html.contains("none"));
@@ -632,7 +632,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
         // assert!(!html.contains("none"));
@@ -663,7 +663,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Hello Shape"));
     }
@@ -689,7 +689,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("rotate(90deg)"));
         assert!(html.contains("scaleX(-1)"));
@@ -719,7 +719,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("M10,5"));
     }
@@ -747,7 +747,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("5,0"));
     }
@@ -775,7 +775,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("5"));
     }
@@ -800,7 +800,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -827,7 +827,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("round"));
         assert!(html.contains("round"));
@@ -857,7 +857,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("linear-gradient"));
     }
@@ -889,7 +889,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("linearRGB"));
     }
@@ -920,7 +920,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -950,7 +950,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -984,7 +984,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("url(#"));
         assert!(html.contains("linearRGB"));
@@ -1014,7 +1014,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1039,7 +1039,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1064,7 +1064,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1090,7 +1090,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
         assert!(html.contains("none"));
@@ -1122,7 +1122,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1146,7 +1146,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1184,7 +1184,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("M"));
     }
@@ -1212,7 +1212,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1241,7 +1241,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         // assert!(!html.contains("none"));
     }
@@ -1267,7 +1267,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("1px"));
     }
@@ -1292,7 +1292,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
     }
@@ -1320,7 +1320,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1347,7 +1347,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1376,7 +1376,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("miter"));
     }
@@ -1406,7 +1406,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("bevel"));
     }
@@ -1434,7 +1434,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("square"));
     }
@@ -1462,7 +1462,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("butt"));
     }
@@ -1490,7 +1490,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1517,7 +1517,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -1542,7 +1542,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         // assert!(!html.contains("none"));
     }
@@ -1571,7 +1571,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
     }
@@ -1607,7 +1607,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("cursor: pointer"));
     }
@@ -1644,7 +1644,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Go to summary"));
     }
@@ -1681,7 +1681,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Go to slide 10"));
     }
@@ -1718,7 +1718,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("cursor: pointer"));
         assert!(html.contains("#slide4"));
@@ -1756,7 +1756,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("cursor: pointer"));
         assert!(html.contains("https://example.com"));
@@ -1795,7 +1795,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Visit website"));
     }
@@ -1832,7 +1832,7 @@
             r
         };
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(!html.contains("cursor: pointer"));
     }
@@ -1865,7 +1865,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(!html.contains("cursor: pointer"));
     }
@@ -1896,7 +1896,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("scale(0.6)"));
         assert!(html.contains("%"));
@@ -1930,7 +1930,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(!html.contains("scale("));
         assert!(html.contains("hidden"));
@@ -1961,7 +1961,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(!html.contains("hidden"));
     }
@@ -1990,7 +1990,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("0.500"));
         assert!(html.contains("0.000"));
@@ -2021,7 +2021,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("below 0.0px"));
     }
@@ -2047,7 +2047,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -2072,7 +2072,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -2102,7 +2102,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
     }
     #[test]
@@ -2143,7 +2143,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Hello"));
     }
@@ -2185,7 +2185,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("White Text"));
     }
@@ -2222,7 +2222,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Dynamic autofit text content"));
     }
@@ -2259,7 +2259,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("Shape auto fit text"));
     }
@@ -2301,7 +2301,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[layout_ph_root] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         println!("HTML OUTPUT: {}", html);
         assert!(!html.is_empty());
         assert!(html.contains("flex-end"));
@@ -2338,7 +2338,7 @@
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let rels = HashMap::new();
         let node = parse_node(&root, &ctx, &mut pkg, "ppt/slides/slide1.xml", &rels).unwrap();
-        let html = render_node(&node);
+        let html = render_node(&node, &mut std::collections::HashMap::new());
         assert!(!html.is_empty());
         assert!(html.contains("none"));
         // assert!(!html.contains("none"));

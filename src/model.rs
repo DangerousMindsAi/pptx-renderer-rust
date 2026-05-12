@@ -14,6 +14,8 @@ pub struct Presentation {
 pub struct Slide {
     pub index: usize,
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub notes: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub background: Option<Background>,
     pub nodes: Vec<SlideNode>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
@@ -44,6 +46,8 @@ pub struct Background {
 pub struct SlideNode {
     pub id: String,
     pub name: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub alt_text: Option<String>,
     pub node_type: String,
     pub position: Position,
     pub size: Size,
@@ -283,6 +287,14 @@ pub struct TableCell {
     pub row_span: u32,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub text_body: Option<TextBody>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub margin_left: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub margin_right: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub margin_top: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub margin_bottom: Option<f64>,
 }
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone)]
@@ -368,7 +380,11 @@ pub struct TextRun {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub cap: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub highlight: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub hlink_click: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub is_break: Option<bool>,
 }
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone, Default)]
@@ -414,6 +430,7 @@ mod tests {
         let node = SlideNode {
             id: "1".to_string(),
             name: "Title 1".to_string(),
+            alt_text: None,
             node_type: "shape".to_string(),
             position: Position { x: 10.0, y: 20.0 },
             size: Size { w: 100.0, h: 50.0 },
@@ -467,7 +484,7 @@ table_properties: None,
             font_family: Some("Arial".to_string()),
             color: Some("#FF0000".to_string()),
             bold: Some(true),
-            italic: None, underline: None, strikethrough: None, kerning: None, letter_spacing: None, baseline: None, cap: None, hlink_click: None,
+            italic: None, underline: None, strikethrough: None, kerning: None, letter_spacing: None, baseline: None, cap: None, highlight: None, hlink_click: None, is_break: None,
         };
         
         let serialized = serde_json::to_string(&run).unwrap();

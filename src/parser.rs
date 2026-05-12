@@ -83,8 +83,9 @@ fn get_ph_info(node: &XmlNode) -> (Option<String>, Option<u32>) {
 }
 
 fn get_xfrm(node: &XmlNode) -> Option<(Position, Size, f64, bool, bool)> {
-    if let Some(sp_pr) = node.child("spPr") {
-        if let Some(xfrm) = sp_pr.child("xfrm") {
+    if let Some(sp_pr) = node.child("spPr").or_else(|| node.child("grpSpPr")).or_else(|| node.child("xfrm")) {
+        let xfrm = if sp_pr.tag.ends_with("xfrm") { Some(sp_pr) } else { sp_pr.child("xfrm") };
+        if let Some(xfrm) = xfrm {
             let mut rot = 0.0;
             let mut flip_h = false;
             let mut flip_v = false;
@@ -424,9 +425,12 @@ pub(crate) fn parse_text_body<'a>(
             tf
         };
 
-        for r in p.children("r") {
-            if let Some(t) = r.child("t") {
-                if let Some(txt) = &t.text {
+        for child in &p.children {
+            let tag_name = child.tag.split(':').last().unwrap_or(&child.tag);
+            if tag_name == "r" {
+                let r = child;
+                if let Some(t) = r.child("t") {
+                    if let Some(txt) = &t.text {
                     p_text.push_str(txt);
                     
                     let r_pr = r.child("rPr");
@@ -464,6 +468,13 @@ pub(crate) fn parse_text_body<'a>(
                         }
                     }
                     
+                    let mut highlight = None;
+                    if let Some(r_pr_node) = r_pr {
+                        if let Some(hl) = r_pr_node.child("highlight") {
+                            highlight = parse_color(&hl, ctx.theme);
+                        }
+                    }
+                    
                     let font_family = resolve_typeface(r_pr);
                     let color = resolve_color(r_pr);
                     
@@ -480,9 +491,29 @@ pub(crate) fn parse_text_body<'a>(
                         letter_spacing,
                         baseline,
                         cap,
+                        highlight,
                         hlink_click,
+                        is_break: None,
                     });
                 }
+            }
+        } else if tag_name == "br" {
+                let r_pr = child.child("rPr");
+                p_text.push('\n');
+                
+                let sz_str = resolve_r_property(r_pr, "sz");
+                let font_size = sz_str.and_then(|s| s.parse::<f64>().ok()).map(|sz| sz / 100.0);
+                let font_family = resolve_typeface(r_pr);
+                let color = resolve_color(r_pr);
+                
+                runs.push(crate::model::TextRun {
+                    text: "\n".to_string(),
+                    font_size,
+                    font_family,
+                    color,
+                    is_break: Some(true),
+                    ..Default::default()
+                });
             }
         }
         total_text.push_str(&p_text);
@@ -1040,6 +1071,7 @@ pub(crate) fn parse_node(
                 }
             }
             Some(SlideNode {
+                alt_text: None,
                 id,
                 name,
                 node_type: "shape".to_string(),
@@ -1086,6 +1118,7 @@ pub(crate) fn parse_node(
                 }
             }
             Some(SlideNode {
+                alt_text: None,
                 id,
                 name,
                 node_type: "picture".to_string(),
@@ -1140,6 +1173,7 @@ pub(crate) fn parse_node(
             }
             
             Some(SlideNode {
+                alt_text: None,
                 id,
                 name,
                 node_type: "group".to_string(),
@@ -1191,11 +1225,28 @@ pub(crate) fn parse_node(
                                     text_body = parse_text_body(tx_body, ctx, "other", master_ph, layout_ph);
                                 }
                                 let text = text_body.as_ref().map(|tb| tb.total_text.clone()).unwrap_or_default();
+                                
+                                let mut margin_left = None;
+                                let mut margin_right = None;
+                                let mut margin_top = None;
+                                let mut margin_bottom = None;
+                                
+                                if let Some(tc_pr) = tc.child("tcPr") {
+                                    if let Some(m) = tc_pr.num_attr("marL") { margin_left = Some(m as f64); }
+                                    if let Some(m) = tc_pr.num_attr("marR") { margin_right = Some(m as f64); }
+                                    if let Some(m) = tc_pr.num_attr("marT") { margin_top = Some(m as f64); }
+                                    if let Some(m) = tc_pr.num_attr("marB") { margin_bottom = Some(m as f64); }
+                                }
+                                
                                 cells.push(crate::model::TableCell {
                                     text,
                                     grid_span,
                                     row_span,
                                     text_body,
+                                    margin_left,
+                                    margin_right,
+                                    margin_top,
+                                    margin_bottom,
                                 });
                             }
                             rows.push(crate::model::TableRow { height, cells });
@@ -1237,6 +1288,7 @@ pub(crate) fn parse_node(
                         }
                         
                         return Some(SlideNode {
+                alt_text: None,
                             id,
                             name,
                             node_type: "table".to_string(),
@@ -1305,6 +1357,12 @@ pub fn parse_presentation(path: &str) -> Result<Presentation, String> {
     let mut slides = Vec::new();
     
     for (i, slide_path) in ordered_slide_targets.iter().enumerate() {
+        let slide_num = if slide_path.starts_with("ppt/slides/slide") && slide_path.ends_with(".xml") {
+            slide_path[16..slide_path.len() - 4].parse::<usize>().unwrap_or(i + 1)
+        } else {
+            i + 1
+        };
+        
         if let Ok(slide_xml) = pkg.read_part(slide_path) {
             let slide_str = String::from_utf8_lossy(&slide_xml);
             if let Ok(slide_root) = XmlNode::parse(&slide_str) {
@@ -1444,6 +1502,32 @@ pub fn parse_presentation(path: &str) -> Result<Presentation, String> {
                     }
                 }
                 
+                let mut parsed_notes = None;
+                for (_, rel) in &slide_rels {
+                    if rel.rel_type.ends_with("/notesSlide") {
+                        let notes_path = resolve_target(slide_path, &rel.target);
+                        if let Ok(notes_xml) = pkg.read_part(&notes_path) {
+                            let notes_str = String::from_utf8_lossy(&notes_xml);
+                            if let Ok(notes_root) = XmlNode::parse(&notes_str) {
+                                let mut text = String::new();
+                                fn extract_text(node: &XmlNode, text: &mut String) {
+                                    if node.tag == "a:t" && node.text.is_some() {
+                                        text.push_str(node.text.as_ref().unwrap());
+                                        text.push('\n');
+                                    }
+                                    for child in &node.children {
+                                        extract_text(child, text);
+                                    }
+                                }
+                                extract_text(&notes_root, &mut text);
+                                if !text.trim().is_empty() {
+                                    parsed_notes = Some(text);
+                                }
+                            }
+                        }
+                    }
+                }
+                
                 let ctx = StyleContext {
                     theme: theme_fonts.as_ref(),
                     master_styles: master_styles.as_ref(),
@@ -1502,7 +1586,8 @@ pub fn parse_presentation(path: &str) -> Result<Presentation, String> {
                 }
                 
                 slides.push(Slide {
-                    index: i,
+                    notes: parsed_notes,
+                    index: slide_num,
                     background: parsed_bg,
                     nodes,
                     layout_nodes,
@@ -2245,7 +2330,7 @@ mod background_renderer_tests {
         };
         
         let pres = crate::model::Presentation { width: 960, height: 540, slide_count: 1, slides: vec![] };
-        let slide = crate::model::Slide { index: 0, background: bg_model, nodes: vec![], layout_nodes: vec![], master_nodes: vec![] };
+        let slide = crate::model::Slide { index: 0, background: bg_model, notes: None, nodes: vec![], layout_nodes: vec![], master_nodes: vec![] };
         render_background(&pres, &slide)
     }
 

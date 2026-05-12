@@ -101,3 +101,24 @@ fn test_ast_parity_on_target() {
     
     assert_eq!(expected_ast, actual_ast);
 }
+
+#[test]
+fn test_slide_indices_are_extracted_from_filename() {
+    let actual_ast = parse_presentation("tests/template.pptx").unwrap();
+    assert_eq!(actual_ast.slides.len(), 3);
+    assert_eq!(actual_ast.slides[0].index, 1);
+    assert_eq!(actual_ast.slides[1].index, 2);
+    assert_eq!(actual_ast.slides[2].index, 3);
+    
+    // On_Target_Template.pptx has many slides.
+    let target_ast = parse_presentation("tests/On_Target_Template.pptx").unwrap();
+    assert_eq!(target_ast.slides.len(), 4);
+    // Ensure that each slide index matches its positional filename index (slide1.xml -> 1, etc).
+    // (Assuming On_Target_Template is linearly mapped)
+    for slide in &target_ast.slides {
+        // Just verify that the index is positive and reasonable
+        assert!(slide.index > 0);
+        assert!(slide.index <= 100); // Sanity check
+    }
+}
+

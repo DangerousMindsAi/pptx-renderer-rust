@@ -13,3 +13,8 @@ serde_json = "1.0"
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
 parley = "0.6"
 base64 = "0.22.1"
+
+[[bin]]
+name = "dump_ast"
+path = "tests/dump_ast.rs"
+
