@@ -2073,7 +2073,7 @@ checksum = "efca4c95a19a79d1c98f791f10aebd5c1363b473244630bb7dbde1dc98455a24"
 
 [[package]]
 name = "pptx-renderer-rust"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "base64",
  "hyper-render",
