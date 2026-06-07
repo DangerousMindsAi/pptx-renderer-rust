@@ -19,5 +19,7 @@ pub fn get_default_fonts() -> Vec<Vec<u8>> {
         include_bytes!("fonts/Tinos-Italic.ttf").to_vec(),
         include_bytes!("fonts/Tinos-Bold.ttf").to_vec(),
         include_bytes!("fonts/Tinos-BoldItalic.ttf").to_vec(),
+        include_bytes!("fonts/Montserrat-Regular.ttf").to_vec(),
+        include_bytes!("fonts/Montserrat-Bold.ttf").to_vec(),
     ]
 }

@@ -94,3 +94,17 @@ fn test_rasterize_on_target() {
         fs::write(format!("tests/harness/actual_on_target_slide_{}.png", slide.index), png_bytes).unwrap();
     }
 }
+
+#[test]
+fn test_print_style_id() {
+    let pres = parse_presentation("../doc-scribe/tests/v2_test_output.pptx").unwrap();
+    for slide in &pres.slides {
+        for node in &slide.nodes {
+            if node.node_type == "table" {
+                println!("Found table: name={}, style_id={:?}", node.name, node.table_style_id);
+            }
+        }
+    }
+    panic!("Force stdout capture");
+}
+

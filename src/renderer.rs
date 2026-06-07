@@ -467,13 +467,13 @@ fn render_text_body(text_body: &crate::model::TextBody, node: &SlideNode, list_c
         if let Some(ref ln_spc) = p.line_spacing {
             if ln_spc.ends_with("%") {
                 if let Ok(val) = ln_spc[..ln_spc.len()-1].parse::<f64>() {
-                    let mut lh = val / 100000.0;
+                    let mut lh = val / 100000.0 * 1.20;
                     if ln_spc_reduction > 0.0 { lh *= 1.0 - ln_spc_reduction; }
                     style.push_str(&format!(" line-height: {};", js_fmt(lh)));
                 }
             } else if ln_spc.ends_with("pt") {
                 if let Ok(val) = ln_spc[..ln_spc.len()-2].parse::<f64>() {
-                    let mut lh = val / 100.0;
+                    let mut lh = val / 100.0 * 1.20;
                     if ln_spc_reduction > 0.0 { lh *= 1.0 - ln_spc_reduction; }
                     style.push_str(&format!(" line-height: {}pt;", js_fmt(lh)));
                 }
@@ -508,12 +508,32 @@ fn render_text_body(text_body: &crate::model::TextBody, node: &SlideNode, list_c
         
         if p.bullet_none != Some(true) {
             let bullet_color = p.bullet_color.as_deref().unwrap_or("inherit");
-            let mut bullet_span_style = format!("color: {};", bullet_color);
+            
+            let mut bullet_sz = 18.0;
+            if let Some(first_run) = p.runs.first() {
+                if let Some(sz) = first_run.font_size {
+                    bullet_sz = sz;
+                }
+            } else if let Some(sz) = p.end_para_font_size {
+                bullet_sz = sz;
+            }
+            bullet_sz *= font_scale;
+
+            let size_mult = if p.bullet_char.is_some() { 1.2 } else { 1.0 };
+            let final_bullet_sz = bullet_sz * size_mult;
+
+            let margin_top_offset = if p.bullet_char.is_some() {
+                " margin-top: -0.08em;"
+            } else {
+                " margin-top: -0.04em;"
+            };
+
+            let mut bullet_span_style = format!("color: {}; font-size: {}pt; line-height: inherit;{}", bullet_color, js_fmt(final_bullet_sz), margin_top_offset);
             
             if indent < 0.0 {
-                bullet_span_style.push_str(&format!(" position: absolute; left: {}px; width: {}px; text-align: right; padding-right: 12px; box-sizing: border-box; font-size: 1.4em; line-height: 1;", js_fmt(indent), js_fmt(-indent)));
+                bullet_span_style.push_str(&format!(" position: absolute; left: {}px; width: {}px; text-align: right; padding-right: 12px; box-sizing: border-box;", js_fmt(indent), js_fmt(-indent)));
             } else {
-                bullet_span_style.push_str(" margin-right: 0.5em; font-size: 1.4em; line-height: 1;");
+                bullet_span_style.push_str(" margin-right: 0.5em;");
             }
             
             if let Some(ref char) = p.bullet_char {
@@ -561,9 +581,10 @@ fn render_text_body(text_body: &crate::model::TextBody, node: &SlideNode, list_c
             };
             let font_family_raw = run.font_family.as_deref().unwrap_or("Calibri");
             let (font_family, generic_fallback) = match font_family_raw {
-                "Calibri" | "Montserrat" | "Montserrat ExtraBold" => ("Carlito", "sans-serif"),
+                "Calibri" | "Calibri Light" => ("Carlito", "sans-serif"),
                 "Arial" => ("Arimo", "sans-serif"),
-                "Times New Roman" | "Georgia" => ("Tinos", "serif"),
+                "Times New Roman" => ("Tinos", "serif"),
+                "Georgia" => ("Georgia", "serif"),
                 other => (other, "sans-serif"),
             };
             
@@ -682,18 +703,30 @@ fn apply_solid_fill(fill: &crate::model::SolidFill) -> String {
         s => if s.starts_with('#') { s } else { "#CCCCCC" }
     };
     
-    if let Some(t) = &fill.color.transform {
+    let res = if let Some(t) = &fill.color.transform {
+        let (r, g, b) = hex_to_rgb(hex);
+        let val_f = t.val / 100000.0;
         if t.kind == "alpha" {
-            let a = t.val / 100000.0;
-            // A rough conversion to rgba. We assume hex is a solid color and we just need grey-ish rgba for tests
-            // Actually, we could parse the hex and output real rgba. 
-            // For now, if we don't have hexToRgb, just output hex. The tests might not be that strict,
-            // or we can just use a hacky grey rgba
-            return format!("rgba(128,128,128,{})", js_fmt(a));
+            format!("rgba({}, {}, {}, {})", r, g, b, js_fmt(val_f))
+        } else if t.kind == "tint" {
+            let r_new = (r as f64 * val_f + 255.0 * (1.0 - val_f)) as u8;
+            let g_new = (g as f64 * val_f + 255.0 * (1.0 - val_f)) as u8;
+            let b_new = (b as f64 * val_f + 255.0 * (1.0 - val_f)) as u8;
+            format!("#{:02X}{:02X}{:02X}", r_new, g_new, b_new)
+        } else if t.kind == "shade" {
+            let r_new = (r as f64 * val_f) as u8;
+            let g_new = (g as f64 * val_f) as u8;
+            let b_new = (b as f64 * val_f) as u8;
+            format!("#{:02X}{:02X}{:02X}", r_new, g_new, b_new)
+        } else {
+            hex.to_string()
         }
-    }
+    } else {
+        hex.to_string()
+    };
     
-    hex.to_string()
+    println!("DEBUG: scheme={}, transform={:?}, returned={}", fill.color.scheme, fill.color.transform, res);
+    res
 }
 
 
@@ -843,10 +876,10 @@ fn render_table(node: &SlideNode, list_counters: &mut std::collections::HashMap<
                 let mut bottom_pad = 45720.0 / 9525.0;
                 let mut justify = "flex-start";
 
-                if let Some(m) = cell.margin_left { left_pad = m / 9525.0; }
-                if let Some(m) = cell.margin_right { right_pad = m / 9525.0; }
-                if let Some(m) = cell.margin_top { top_pad = m / 9525.0; }
-                if let Some(m) = cell.margin_bottom { bottom_pad = m / 9525.0; }
+                if let Some(m) = cell.margin_left { left_pad = m / 9525.0 + 10.0; } else { left_pad += 10.0; }
+                if let Some(m) = cell.margin_right { right_pad = m / 9525.0 + 10.0; } else { right_pad += 10.0; }
+                if let Some(m) = cell.margin_top { top_pad = m / 9525.0 + 6.0; } else { top_pad += 6.0; }
+                if let Some(m) = cell.margin_bottom { bottom_pad = m / 9525.0 + 6.0; } else { bottom_pad += 6.0; }
 
                 if let Some(tb) = &cell.text_body {
                     justify = match tb.vertical_align.as_deref() {
