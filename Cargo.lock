@@ -1842,8 +1842,8 @@ checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 
 [[package]]
 name = "openxml"
-version = "0.1.0"
-source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
+version = "0.1.1"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git?tag=v0.1.1#2742ec562711e167f2585bfa4819ddeed523f9e6"
 dependencies = [
  "openxml-dom",
  "openxml-opc",
@@ -1851,8 +1851,8 @@ dependencies = [
 
 [[package]]
 name = "openxml-dom"
-version = "0.1.0"
-source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
+version = "0.1.1"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git?tag=v0.1.1#2742ec562711e167f2585bfa4819ddeed523f9e6"
 dependencies = [
  "openxml-generator",
  "quick-xml 0.39.3",
@@ -1862,7 +1862,7 @@ dependencies = [
 [[package]]
 name = "openxml-generator"
 version = "0.1.0"
-source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git?tag=v0.1.1#2742ec562711e167f2585bfa4819ddeed523f9e6"
 dependencies = [
  "anyhow",
  "proc-macro2",
@@ -1875,8 +1875,8 @@ dependencies = [
 
 [[package]]
 name = "openxml-opc"
-version = "0.1.0"
-source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git#266be7816c73369dc6ebe31896fb8e0632c3506b"
+version = "0.1.1"
+source = "git+ssh://git@github.com/DangerousMindsAi/Open-XML-SDK-Rust.git?tag=v0.1.1#2742ec562711e167f2585bfa4819ddeed523f9e6"
 dependencies = [
  "zip",
 ]
@@ -2073,7 +2073,7 @@ checksum = "efca4c95a19a79d1c98f791f10aebd5c1363b473244630bb7dbde1dc98455a24"
 
 [[package]]
 name = "pptx-renderer-rust"
-version = "0.1.1"
+version = "0.2.1"
 dependencies = [
  "base64",
  "hyper-render",
