@@ -5,7 +5,7 @@ use std::fs;
 
 #[test]
 fn test_rasterize_template() {
-    let actual_ast = parse_presentation("tests/template.pptx").unwrap();
+    let (actual_ast, _) = parse_presentation("tests/template.pptx").unwrap();
     let slide_html = render_slide(&actual_ast, &actual_ast.slides[0]);
     
     // Wrap in full HTML doc
@@ -46,7 +46,7 @@ fn test_rasterize_template() {
 
 #[test]
 fn test_rasterize_on_target() {
-    let actual_ast = parse_presentation("tests/On_Target_Template.pptx").unwrap();
+    let (actual_ast, _) = parse_presentation("tests/On_Target_Template.pptx").unwrap();
     
     for slide in &actual_ast.slides {
         let slide_html = render_slide(&actual_ast, slide);
@@ -97,7 +97,7 @@ fn test_rasterize_on_target() {
 
 #[test]
 fn test_print_style_id() {
-    let pres = parse_presentation("../doc-scribe/tests/v2_test_output.pptx").unwrap();
+    let (pres, _) = parse_presentation("../doc-scribe/tests/v2_test_output.pptx").unwrap();
     for slide in &pres.slides {
         for node in &slide.nodes {
             if node.node_type == "table" {

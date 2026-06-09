@@ -1,6 +1,6 @@
 [package]
 name = "pptx-renderer-rust"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2024"
 
 [dependencies]
@@ -15,5 +15,10 @@ base64 = "0.22.1"
 
 [dev-dependencies]
 hyper-render = { git = "https://github.com/AGanguli/hyper-render.git", features = ["png"] }
+
+[[test]]
+name = "update_ast"
+harness = false
+
 
 

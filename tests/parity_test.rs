@@ -81,7 +81,7 @@ fn test_ast_parity_template() {
     let expected_json = fs::read_to_string("tests/harness/expected_ast_template.json").unwrap();
     let mut expected_ast: Presentation = serde_json::from_str(&expected_json).unwrap();
     
-    let mut actual_ast = parse_presentation("tests/template.pptx").unwrap();
+    let (mut actual_ast, _) = parse_presentation("tests/template.pptx").unwrap();
     
     normalize_ast(&mut expected_ast);
     normalize_ast(&mut actual_ast);
@@ -94,7 +94,7 @@ fn test_ast_parity_on_target() {
     let expected_json = fs::read_to_string("tests/harness/expected_ast_on_target.json").unwrap();
     let mut expected_ast: Presentation = serde_json::from_str(&expected_json).unwrap();
     
-    let mut actual_ast = parse_presentation("tests/On_Target_Template.pptx").unwrap();
+    let (mut actual_ast, _) = parse_presentation("tests/On_Target_Template.pptx").unwrap();
     
     normalize_ast(&mut expected_ast);
     normalize_ast(&mut actual_ast);
@@ -104,14 +104,14 @@ fn test_ast_parity_on_target() {
 
 #[test]
 fn test_slide_indices_are_extracted_from_filename() {
-    let actual_ast = parse_presentation("tests/template.pptx").unwrap();
+    let (actual_ast, _) = parse_presentation("tests/template.pptx").unwrap();
     assert_eq!(actual_ast.slides.len(), 3);
     assert_eq!(actual_ast.slides[0].index, 1);
     assert_eq!(actual_ast.slides[1].index, 2);
     assert_eq!(actual_ast.slides[2].index, 3);
     
     // On_Target_Template.pptx has many slides.
-    let target_ast = parse_presentation("tests/On_Target_Template.pptx").unwrap();
+    let (target_ast, _) = parse_presentation("tests/On_Target_Template.pptx").unwrap();
     assert_eq!(target_ast.slides.len(), 4);
     // Ensure that each slide index matches its positional filename index (slide1.xml -> 1, etc).
     // (Assuming On_Target_Template is linearly mapped)

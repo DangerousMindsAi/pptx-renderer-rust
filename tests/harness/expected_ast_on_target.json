@@ -5,11 +5,13 @@
   "slides": [
     {
       "index": 1,
-      "notes": "1\n",
-      "background": {},
+      "notes": "<number>\n",
+      "background": {
+        "color": "#06112A"
+      },
       "nodes": [
         {
-          "id": "2",
+          "id": "40",
           "name": "Text 0",
           "nodeType": "shape",
           "position": {
@@ -17,8 +19,8 @@
             "y": 230.4
           },
           "size": {
-            "w": 1056.0,
-            "h": 153.6
+            "w": 1055.9622047244095,
+            "h": 153.56220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -30,30 +32,52 @@
                 "text": "On Target",
                 "runs": [
                   {
-                    "text": "On Target"
+                    "text": "On ",
+                    "fontSize": 84.0,
+                    "fontFamily": "Georgia",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
+                  },
+                  {
+                    "text": "Target",
+                    "fontSize": 84.0,
+                    "fontFamily": "Georgia",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 84.0
               }
             ],
-            "totalText": "On Target"
+            "totalText": "On Target",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "3",
+          "id": "41",
           "name": "Text 1",
           "nodeType": "shape",
           "position": {
@@ -61,8 +85,8 @@
             "y": 393.6
           },
           "size": {
-            "w": 1056.0,
-            "h": 57.6
+            "w": 1055.9622047244095,
+            "h": 57.56220472440945
           },
           "rotation": 0.0,
           "flipH": false,
@@ -74,30 +98,44 @@
                 "text": "An AI LLM platform built for precision insight",
                 "runs": [
                   {
-                    "text": "An AI LLM platform built for precision insight"
+                    "text": "An AI LLM platform built for precision insight",
+                    "fontSize": 22.0,
+                    "fontFamily": "Calibri",
+                    "color": "#17B8C4",
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 22.0
               }
             ],
-            "totalText": "An AI LLM platform built for precision insight"
+            "totalText": "An AI LLM platform built for precision insight",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "4",
+          "id": "42",
           "name": "Shape 2",
           "nodeType": "shape",
           "position": {
@@ -105,29 +143,44 @@
             "y": 465.6
           },
           "size": {
-            "w": 67.2,
-            "h": 5.76
+            "w": 67.16220472440945,
+            "h": 5.707086614173228
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 9720.0,
+            "marginBottom": 9720.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#F26B3A"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "5",
+          "id": "43",
           "name": "Text 3",
           "nodeType": "shape",
           "position": {
@@ -135,8 +188,8 @@
             "y": 480.0
           },
           "size": {
-            "w": 1056.0,
-            "h": 38.4
+            "w": 1055.9622047244095,
+            "h": 38.36220472440945
           },
           "rotation": 0.0,
           "flipH": false,
@@ -148,24 +201,442 @@
                 "text": "Presented by In Your Genes Consulting",
                 "runs": [
                   {
-                    "text": "Presented by In Your Genes Consulting"
+                    "text": "Presented by In Your Genes Consulting",
+                    "fontSize": 14.0,
+                    "fontFamily": "Calibri",
+                    "color": "#A9B3C7",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false,
+                    "letterSpacing": 3.0
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 14.0
               }
             ],
-            "totalText": "Presented by In Your Genes Consulting"
+            "totalText": "Presented by In Your Genes Consulting",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
+              }
+            }
+          }
+        }
+      ],
+      "layoutNodes": [
+        {
+          "id": "2",
+          "name": "Shape 0",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 686.4
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#17B8C4"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "3",
+          "name": "Shape 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 691.2
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#6CC04A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "4",
+          "name": "Shape 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 696.0
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F4C430"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "5",
+          "name": "Shape 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 700.8
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "6",
+          "name": "Shape 4",
+          "nodeType": "shape",
+          "position": {
+            "x": 1113.6,
+            "y": 576.0
+          },
+          "size": {
+            "w": 166.33700787401574,
+            "h": 110.36220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#0F2452"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "7",
+          "name": "Image 0",
+          "nodeType": "picture",
+          "position": {
+            "x": 48.0,
+            "y": 43.2
+          },
+          "size": {
+            "w": 115.16220472440945,
+            "h": 115.16220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "blipEmbed": "scribe-image://ppt/media/image1.png"
+        },
+        {
+          "id": "8",
+          "name": "Shape 5",
+          "nodeType": "shape",
+          "position": {
+            "x": 174.72755905511812,
+            "y": 52.8
+          },
+          "size": {
+            "w": 7.634645669291339,
+            "h": 95.96220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "9",
+          "name": "Text 6",
+          "nodeType": "shape",
+          "position": {
+            "x": 196.8,
+            "y": 40.32755905511811
+          },
+          "size": {
+            "w": 767.9622047244095,
+            "h": 67.16220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "ON TARGET",
+                "runs": [
+                  {
+                    "text": "ON TARGET",
+                    "fontSize": 32.0,
+                    "fontFamily": "Montserrat ExtraBold",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 32.0
+              }
+            ],
+            "totalText": "ON TARGET",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "10",
+          "name": "Text 7",
+          "nodeType": "shape",
+          "position": {
+            "x": 198.72755905511812,
+            "y": 107.5275590551181
+          },
+          "size": {
+            "w": 767.9622047244095,
+            "h": 38.36220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "IN YOUR GENES CONSULTING",
+                "runs": [
+                  {
+                    "text": "IN YOUR GENES CONSULTING",
+                    "fontSize": 11.0,
+                    "fontFamily": "Arial",
+                    "color": "#17B8C4",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false,
+                    "letterSpacing": 2.01
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 11.0
+              }
+            ],
+            "totalText": "IN YOUR GENES CONSULTING",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
               }
             }
           }
@@ -174,11 +645,13 @@
     },
     {
       "index": 2,
-      "notes": "2\n",
-      "background": {},
+      "notes": "<number>\n",
+      "background": {
+        "color": "#0B1B3B"
+      },
       "nodes": [
         {
-          "id": "2",
+          "id": "44",
           "name": "Text 0",
           "nodeType": "shape",
           "position": {
@@ -186,8 +659,8 @@
             "y": 153.6
           },
           "size": {
-            "w": 384.0,
-            "h": 153.6
+            "w": 383.96220472440945,
+            "h": 153.56220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -199,30 +672,43 @@
                 "text": "01",
                 "runs": [
                   {
-                    "text": "01"
+                    "text": "01",
+                    "fontSize": 120.0,
+                    "fontFamily": "Georgia",
+                    "color": "#17B8C4",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 120.0
               }
             ],
-            "totalText": "01"
+            "totalText": "01",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "3",
+          "id": "45",
           "name": "Text 1",
           "nodeType": "shape",
           "position": {
@@ -230,8 +716,8 @@
             "y": 345.6
           },
           "size": {
-            "w": 960.0,
-            "h": 96.0
+            "w": 959.9622047244095,
+            "h": 95.96220472440945
           },
           "rotation": 0.0,
           "flipH": false,
@@ -243,30 +729,43 @@
                 "text": "The Opportunity",
                 "runs": [
                   {
-                    "text": "The Opportunity"
+                    "text": "The Opportunity",
+                    "fontSize": 54.0,
+                    "fontFamily": "Georgia",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 54.0
               }
             ],
-            "totalText": "The Opportunity"
+            "totalText": "The Opportunity",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "4",
+          "id": "46",
           "name": "Text 2",
           "nodeType": "shape",
           "position": {
@@ -274,8 +773,8 @@
             "y": 451.2
           },
           "size": {
-            "w": 960.0,
-            "h": 48.0
+            "w": 959.9622047244095,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -287,24 +786,352 @@
                 "text": "Why precision AI matters for your organization",
                 "runs": [
                   {
-                    "text": "Why precision AI matters for your organization"
+                    "text": "Why precision AI matters for your organization",
+                    "fontSize": 20.0,
+                    "fontFamily": "Calibri",
+                    "color": "#A9B3C7",
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 20.0
               }
             ],
-            "totalText": "Why precision AI matters for your organization"
+            "totalText": "Why precision AI matters for your organization",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
+              }
+            }
+          }
+        }
+      ],
+      "layoutNodes": [
+        {
+          "id": "25",
+          "name": "Shape 0",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "size": {
+            "w": 33.56220472440945,
+            "h": 719.9622047244095
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#17B8C4"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "26",
+          "name": "Shape 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 33.6,
+            "y": 0.0
+          },
+          "size": {
+            "w": 17.23464566929134,
+            "h": 719.9622047244095
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#6CC04A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "27",
+          "name": "Shape 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 50.87244094488189,
+            "y": 0.0
+          },
+          "size": {
+            "w": 9.56220472440945,
+            "h": 719.9622047244095
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F4C430"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "28",
+          "name": "Shape 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 60.47244094488189,
+            "y": 0.0
+          },
+          "size": {
+            "w": 5.707086614173228,
+            "h": 719.9622047244095
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "29",
+          "name": "Image 0",
+          "nodeType": "picture",
+          "position": {
+            "x": 1113.6,
+            "y": 43.2
+          },
+          "size": {
+            "w": 124.76220472440944,
+            "h": 124.76220472440944
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "blipEmbed": "scribe-image://ppt/media/image1.png"
+        },
+        {
+          "id": "30",
+          "name": "Text 4",
+          "nodeType": "shape",
+          "position": {
+            "x": 96.0,
+            "y": 628.8
+          },
+          "size": {
+            "w": 959.9622047244095,
+            "h": 47.962204724409446
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "ON TARGET",
+                "runs": [
+                  {
+                    "text": "ON TARGET",
+                    "fontSize": 20.0,
+                    "fontFamily": "Montserrat ExtraBold",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 20.0
+              }
+            ],
+            "totalText": "ON TARGET",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "31",
+          "name": "Text 5",
+          "nodeType": "shape",
+          "position": {
+            "x": 97.92755905511811,
+            "y": 672.0
+          },
+          "size": {
+            "w": 959.9622047244095,
+            "h": 28.76220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "IN YOUR GENES CONSULTING",
+                "runs": [
+                  {
+                    "text": "IN YOUR GENES CONSULTING",
+                    "fontSize": 9.0,
+                    "fontFamily": "Arial",
+                    "color": "#17B8C4",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false,
+                    "letterSpacing": 2.01
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 9.0
+              }
+            ],
+            "totalText": "IN YOUR GENES CONSULTING",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
               }
             }
           }
@@ -313,11 +1140,13 @@
     },
     {
       "index": 3,
-      "notes": "3\n",
-      "background": {},
+      "notes": "<number>\n",
+      "background": {
+        "color": "#F7F4EC"
+      },
       "nodes": [
         {
-          "id": "2",
+          "id": "47",
           "name": "Text 0",
           "nodeType": "shape",
           "position": {
@@ -325,8 +1154,8 @@
             "y": 86.4
           },
           "size": {
-            "w": 1152.0,
-            "h": 67.2
+            "w": 1151.9622047244095,
+            "h": 67.16220472440945
           },
           "rotation": 0.0,
           "flipH": false,
@@ -338,30 +1167,43 @@
                 "text": "What is On Target?",
                 "runs": [
                   {
-                    "text": "What is On Target?"
+                    "text": "What is On Target?",
+                    "fontSize": 36.0,
+                    "fontFamily": "Georgia",
+                    "color": "#06112A",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 36.0
               }
             ],
-            "totalText": "What is On Target?"
+            "totalText": "What is On Target?",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "3",
+          "id": "48",
           "name": "Shape 1",
           "nodeType": "shape",
           "position": {
@@ -369,29 +1211,44 @@
             "y": 153.6
           },
           "size": {
-            "w": 57.6,
-            "h": 4.8
+            "w": 57.56220472440945,
+            "h": 4.7622047244094485
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#F26B3A"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "4",
+          "id": "49",
           "name": "Shape 2",
           "nodeType": "shape",
           "position": {
@@ -399,30 +1256,48 @@
             "y": 192.0
           },
           "size": {
-            "w": 571.2,
-            "h": 220.8
+            "w": 571.1622047244094,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 5217.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#FFFFFF"
             }
           },
           "line": {
             "width": 9525.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "#E5E1D6"
               }
             },
-            "dash": "solid"
+            "join": "round"
           }
         },
         {
-          "id": "5",
+          "id": "50",
           "name": "Shape 3",
           "nodeType": "shape",
           "position": {
@@ -430,29 +1305,47 @@
             "y": 192.0
           },
           "size": {
-            "w": 11.52,
-            "h": 220.8
+            "w": 11.489763779527559,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 50000.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#17B8C4"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "6",
+          "id": "51",
           "name": "Text 4",
           "nodeType": "shape",
           "position": {
@@ -460,8 +1353,8 @@
             "y": 216.0
           },
           "size": {
-            "w": 513.6,
-            "h": 48.0
+            "w": 513.5622047244094,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -473,30 +1366,43 @@
                 "text": "Tailored Models",
                 "runs": [
                   {
-                    "text": "Tailored Models"
+                    "text": "Tailored Models",
+                    "fontSize": 22.0,
+                    "fontFamily": "Georgia",
+                    "color": "#06112A",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 22.0
               }
             ],
-            "totalText": "Tailored Models"
+            "totalText": "Tailored Models",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "7",
+          "id": "52",
           "name": "Text 5",
           "nodeType": "shape",
           "position": {
@@ -504,8 +1410,8 @@
             "y": 273.6
           },
           "size": {
-            "w": 513.6,
-            "h": 124.8
+            "w": 513.5622047244094,
+            "h": 124.76220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -517,30 +1423,43 @@
                 "text": "Domain-trained LLMs aligned to your data, voice, and goals.",
                 "runs": [
                   {
-                    "text": "Domain-trained LLMs aligned to your data, voice, and goals."
+                    "text": "Domain-trained LLMs aligned to your data, voice, and goals.",
+                    "fontSize": 15.0,
+                    "fontFamily": "Calibri",
+                    "color": "#4A5568",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 15.0
               }
             ],
-            "totalText": "Domain-trained LLMs aligned to your data, voice, and goals."
+            "totalText": "Domain-trained LLMs aligned to your data, voice, and goals.",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "8",
+          "id": "53",
           "name": "Shape 6",
           "nodeType": "shape",
           "position": {
@@ -548,30 +1467,48 @@
             "y": 192.0
           },
           "size": {
-            "w": 571.2,
-            "h": 220.8
+            "w": 571.1622047244094,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 5217.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#FFFFFF"
             }
           },
           "line": {
             "width": 9525.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "#E5E1D6"
               }
             },
-            "dash": "solid"
+            "join": "round"
           }
         },
         {
-          "id": "9",
+          "id": "54",
           "name": "Shape 7",
           "nodeType": "shape",
           "position": {
@@ -579,29 +1516,47 @@
             "y": 192.0
           },
           "size": {
-            "w": 11.52,
-            "h": 220.8
+            "w": 11.489763779527559,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 50000.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#6CC04A"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "10",
+          "id": "55",
           "name": "Text 8",
           "nodeType": "shape",
           "position": {
@@ -609,8 +1564,8 @@
             "y": 216.0
           },
           "size": {
-            "w": 513.6,
-            "h": 48.0
+            "w": 513.5622047244094,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -622,30 +1577,43 @@
                 "text": "Actionable Insight",
                 "runs": [
                   {
-                    "text": "Actionable Insight"
+                    "text": "Actionable Insight",
+                    "fontSize": 22.0,
+                    "fontFamily": "Georgia",
+                    "color": "#06112A",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 22.0
               }
             ],
-            "totalText": "Actionable Insight"
+            "totalText": "Actionable Insight",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "11",
+          "id": "56",
           "name": "Text 9",
           "nodeType": "shape",
           "position": {
@@ -653,8 +1621,8 @@
             "y": 273.6
           },
           "size": {
-            "w": 513.6,
-            "h": 124.8
+            "w": 513.5622047244094,
+            "h": 124.76220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -666,30 +1634,43 @@
                 "text": "Turn unstructured information into precise, on-target recommendations.",
                 "runs": [
                   {
-                    "text": "Turn unstructured information into precise, on-target recommendations."
+                    "text": "Turn unstructured information into precise, on-target recommendations.",
+                    "fontSize": 15.0,
+                    "fontFamily": "Calibri",
+                    "color": "#4A5568",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 15.0
               }
             ],
-            "totalText": "Turn unstructured information into precise, on-target recommendations."
+            "totalText": "Turn unstructured information into precise, on-target recommendations.",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "12",
+          "id": "57",
           "name": "Shape 10",
           "nodeType": "shape",
           "position": {
@@ -697,30 +1678,48 @@
             "y": 436.8
           },
           "size": {
-            "w": 571.2,
-            "h": 220.8
+            "w": 571.1622047244094,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 5217.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#FFFFFF"
             }
           },
           "line": {
             "width": 9525.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "#E5E1D6"
               }
             },
-            "dash": "solid"
+            "join": "round"
           }
         },
         {
-          "id": "13",
+          "id": "58",
           "name": "Shape 11",
           "nodeType": "shape",
           "position": {
@@ -728,29 +1727,47 @@
             "y": 436.8
           },
           "size": {
-            "w": 11.52,
-            "h": 220.8
+            "w": 11.489763779527559,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 50000.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#F4C430"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "14",
+          "id": "59",
           "name": "Text 12",
           "nodeType": "shape",
           "position": {
@@ -758,8 +1775,8 @@
             "y": 460.8
           },
           "size": {
-            "w": 513.6,
-            "h": 48.0
+            "w": 513.5622047244094,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -771,30 +1788,43 @@
                 "text": "Secure by Design",
                 "runs": [
                   {
-                    "text": "Secure by Design"
+                    "text": "Secure by Design",
+                    "fontSize": 22.0,
+                    "fontFamily": "Georgia",
+                    "color": "#06112A",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 22.0
               }
             ],
-            "totalText": "Secure by Design"
+            "totalText": "Secure by Design",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "15",
+          "id": "60",
           "name": "Text 13",
           "nodeType": "shape",
           "position": {
@@ -802,8 +1832,8 @@
             "y": 518.4
           },
           "size": {
-            "w": 513.6,
-            "h": 124.8
+            "w": 513.5622047244094,
+            "h": 124.76220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -815,30 +1845,43 @@
                 "text": "Enterprise-grade controls so your data stays yours.",
                 "runs": [
                   {
-                    "text": "Enterprise-grade controls so your data stays yours."
+                    "text": "Enterprise-grade controls so your data stays yours.",
+                    "fontSize": 15.0,
+                    "fontFamily": "Calibri",
+                    "color": "#4A5568",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 15.0
               }
             ],
-            "totalText": "Enterprise-grade controls so your data stays yours."
+            "totalText": "Enterprise-grade controls so your data stays yours.",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "16",
+          "id": "61",
           "name": "Shape 14",
           "nodeType": "shape",
           "position": {
@@ -846,30 +1889,48 @@
             "y": 436.8
           },
           "size": {
-            "w": 571.2,
-            "h": 220.8
+            "w": 571.1622047244094,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 5217.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#FFFFFF"
             }
           },
           "line": {
             "width": 9525.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "#E5E1D6"
               }
             },
-            "dash": "solid"
+            "join": "round"
           }
         },
         {
-          "id": "17",
+          "id": "62",
           "name": "Shape 15",
           "nodeType": "shape",
           "position": {
@@ -877,29 +1938,47 @@
             "y": 436.8
           },
           "size": {
-            "w": 11.52,
-            "h": 220.8
+            "w": 11.489763779527559,
+            "h": 220.76220472440946
           },
           "rotation": 0.0,
           "flipH": false,
           "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
           "presetGeometry": "roundRect",
+          "adjustments": {
+            "adj": 50000.0
+          },
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "#F26B3A"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "18",
+          "id": "63",
           "name": "Text 16",
           "nodeType": "shape",
           "position": {
@@ -907,8 +1986,8 @@
             "y": 460.8
           },
           "size": {
-            "w": 513.6,
-            "h": 48.0
+            "w": 513.5622047244094,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -920,30 +1999,43 @@
                 "text": "Human-in-the-Loop",
                 "runs": [
                   {
-                    "text": "Human-in-the-Loop"
+                    "text": "Human-in-the-Loop",
+                    "fontSize": 22.0,
+                    "fontFamily": "Georgia",
+                    "color": "#06112A",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 22.0
               }
             ],
-            "totalText": "Human-in-the-Loop"
+            "totalText": "Human-in-the-Loop",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "19",
+          "id": "64",
           "name": "Text 17",
           "nodeType": "shape",
           "position": {
@@ -951,8 +2043,8 @@
             "y": 518.4
           },
           "size": {
-            "w": 513.6,
-            "h": 124.8
+            "w": 513.5622047244094,
+            "h": 124.76220472440944
           },
           "rotation": 0.0,
           "flipH": false,
@@ -964,24 +2056,511 @@
                 "text": "Augment your experts — don't replace them.",
                 "runs": [
                   {
-                    "text": "Augment your experts — don't replace them."
+                    "text": "Augment your experts — don't replace them.",
+                    "fontSize": 15.0,
+                    "fontFamily": "Calibri",
+                    "color": "#4A5568",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 15.0
               }
             ],
-            "totalText": "Augment your experts — don't replace them."
+            "totalText": "Augment your experts — don't replace them.",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
+              }
+            }
+          }
+        }
+      ],
+      "layoutNodes": [
+        {
+          "id": "13",
+          "name": "Shape 0",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 52.76220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#06112A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "14",
+          "name": "Shape 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 52.8
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 5.707086614173228
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 9720.0,
+            "marginBottom": 9720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#17B8C4"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "15",
+          "name": "Image 0",
+          "nodeType": "picture",
+          "position": {
+            "x": 28.8,
+            "y": 6.72755905511811
+          },
+          "size": {
+            "w": 40.28976377952756,
+            "h": 40.28976377952756
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "blipEmbed": "scribe-image://ppt/media/image1.png"
+        },
+        {
+          "id": "16",
+          "name": "Text 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 81.6,
+            "y": 4.8
+          },
+          "size": {
+            "w": 479.96220472440945,
+            "h": 26.834645669291337
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "ON TARGET",
+                "runs": [
+                  {
+                    "text": "ON TARGET",
+                    "fontSize": 14.0,
+                    "fontFamily": "Montserrat ExtraBold",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 14.0
+              }
+            ],
+            "totalText": "ON TARGET",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "17",
+          "name": "Text 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 82.54488188976379,
+            "y": 29.74488188976378
+          },
+          "size": {
+            "w": 575.9622047244095,
+            "h": 23.017322834645668
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "IN YOUR GENES CONSULTING",
+                "runs": [
+                  {
+                    "text": "IN YOUR GENES CONSULTING",
+                    "fontSize": 8.0,
+                    "fontFamily": "Arial",
+                    "color": "#17B8C4",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false,
+                    "letterSpacing": 0.99
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 8.0
+              }
+            ],
+            "totalText": "IN YOUR GENES CONSULTING",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "18",
+          "name": "Shape 4",
+          "nodeType": "shape",
+          "position": {
+            "x": 48.0,
+            "y": 691.2
+          },
+          "size": {
+            "w": 11.489763779527559,
+            "h": 11.489763779527559
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#6CC04A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "19",
+          "name": "Shape 5",
+          "nodeType": "shape",
+          "position": {
+            "x": 63.344881889763776,
+            "y": 691.2
+          },
+          "size": {
+            "w": 11.489763779527559,
+            "h": 11.489763779527559
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F4C430"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "20",
+          "name": "Shape 6",
+          "nodeType": "shape",
+          "position": {
+            "x": 78.7275590551181,
+            "y": 691.2
+          },
+          "size": {
+            "w": 11.489763779527559,
+            "h": 11.489763779527559
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "21",
+          "name": "Text 7",
+          "nodeType": "shape",
+          "position": {
+            "x": 100.8,
+            "y": 686.4
+          },
+          "size": {
+            "w": 575.9622047244095,
+            "h": 23.96220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "On Target — Confidential",
+                "runs": [
+                  {
+                    "text": "On Target — Confidential",
+                    "fontSize": 9.0,
+                    "fontFamily": "Calibri",
+                    "color": "#6B7280",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 9.0
+              }
+            ],
+            "totalText": "On Target — Confidential",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "22",
+          "name": "Text 8",
+          "nodeType": "shape",
+          "position": {
+            "x": 1056.0,
+            "y": 686.4
+          },
+          "size": {
+            "w": 201.56220472440944,
+            "h": 23.96220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "inyourgenesconsulting.com",
+                "runs": [
+                  {
+                    "text": "inyourgenesconsulting.com",
+                    "fontSize": 9.0,
+                    "fontFamily": "Calibri",
+                    "color": "#6B7280",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "align": "r",
+                "lineSpacing": "100000%",
+                "endParaFontSize": 9.0
+              }
+            ],
+            "totalText": "inyourgenesconsulting.com",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
               }
             }
           }
@@ -990,11 +2569,13 @@
     },
     {
       "index": 4,
-      "notes": "4\n",
-      "background": {},
+      "notes": "<number>\n",
+      "background": {
+        "color": "#06112A"
+      },
       "nodes": [
         {
-          "id": "2",
+          "id": "65",
           "name": "Text 0",
           "nodeType": "shape",
           "position": {
@@ -1002,8 +2583,8 @@
             "y": 249.6
           },
           "size": {
-            "w": 1152.0,
-            "h": 134.4
+            "w": 1151.9622047244095,
+            "h": 134.36220472440945
           },
           "rotation": 0.0,
           "flipH": false,
@@ -1015,30 +2596,43 @@
                 "text": "Let's hit the target.",
                 "runs": [
                   {
-                    "text": "Let's hit the target."
+                    "text": "Let's hit the target.",
+                    "fontSize": 64.0,
+                    "fontFamily": "Georgia",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 64.0
               }
             ],
-            "totalText": "Let's hit the target."
+            "totalText": "Let's hit the target.",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
               }
             }
           }
         },
         {
-          "id": "3",
+          "id": "66",
           "name": "Text 1",
           "nodeType": "shape",
           "position": {
@@ -1046,8 +2640,8 @@
             "y": 403.2
           },
           "size": {
-            "w": 1056.0,
-            "h": 48.0
+            "w": 1055.9622047244095,
+            "h": 47.962204724409446
           },
           "rotation": 0.0,
           "flipH": false,
@@ -1056,27 +2650,444 @@
             "paragraphs": [
               {
                 "level": 0,
-                "text": "hello@inyourgenesconsulting.com",
+                "text": "hello@inyourgenesconsulting.net",
                 "runs": [
                   {
-                    "text": "hello@inyourgenesconsulting.com"
+                    "text": "hello@inyourgenesconsulting.net",
+                    "fontSize": 20.0,
+                    "fontFamily": "Calibri",
+                    "color": "#17B8C4",
+                    "bold": false,
+                    "underline": false,
+                    "strikethrough": false
                   }
-                ]
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 20.0
               }
             ],
-            "totalText": "hello@inyourgenesconsulting.com"
+            "totalText": "hello@inyourgenesconsulting.net",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
           },
           "presetGeometry": "rect",
           "solidFill": {
             "color": {
-              "scheme": ""
+              "scheme": "transparent"
             }
           },
           "line": {
-            "width": 12700.0,
+            "width": 0.0,
             "fill": {
               "color": {
-                "scheme": ""
+                "scheme": "transparent"
+              }
+            }
+          }
+        }
+      ],
+      "layoutNodes": [
+        {
+          "id": "2",
+          "name": "Shape 0",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 686.4
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#17B8C4"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "3",
+          "name": "Shape 1",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 691.2
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#6CC04A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "4",
+          "name": "Shape 2",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 696.0
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F4C430"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "5",
+          "name": "Shape 3",
+          "nodeType": "shape",
+          "position": {
+            "x": 0.0,
+            "y": 700.8
+          },
+          "size": {
+            "w": 1279.9370078740158,
+            "h": 4.7622047244094485
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 720.0,
+            "marginBottom": 720.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "6",
+          "name": "Shape 4",
+          "nodeType": "shape",
+          "position": {
+            "x": 1113.6,
+            "y": 576.0
+          },
+          "size": {
+            "w": 166.33700787401574,
+            "h": 110.36220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#0F2452"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "7",
+          "name": "Image 0",
+          "nodeType": "picture",
+          "position": {
+            "x": 48.0,
+            "y": 43.2
+          },
+          "size": {
+            "w": 115.16220472440945,
+            "h": 115.16220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "blipEmbed": "scribe-image://ppt/media/image1.png"
+        },
+        {
+          "id": "8",
+          "name": "Shape 5",
+          "nodeType": "shape",
+          "position": {
+            "x": 174.72755905511812,
+            "y": 52.8
+          },
+          "size": {
+            "w": 7.634645669291339,
+            "h": 95.96220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "",
+                "endParaFontSize": 18.0
+              }
+            ],
+            "totalText": "",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "t"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "#F26B3A"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "9",
+          "name": "Text 6",
+          "nodeType": "shape",
+          "position": {
+            "x": 196.8,
+            "y": 40.32755905511811
+          },
+          "size": {
+            "w": 767.9622047244095,
+            "h": 67.16220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "ON TARGET",
+                "runs": [
+                  {
+                    "text": "ON TARGET",
+                    "fontSize": 32.0,
+                    "fontFamily": "Montserrat ExtraBold",
+                    "color": "#FFFFFF",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 32.0
+              }
+            ],
+            "totalText": "ON TARGET",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
+              }
+            }
+          }
+        },
+        {
+          "id": "10",
+          "name": "Text 7",
+          "nodeType": "shape",
+          "position": {
+            "x": 198.72755905511812,
+            "y": 107.5275590551181
+          },
+          "size": {
+            "w": 767.9622047244095,
+            "h": 38.36220472440945
+          },
+          "rotation": 0.0,
+          "flipH": false,
+          "flipV": false,
+          "textBody": {
+            "paragraphs": [
+              {
+                "level": 0,
+                "text": "IN YOUR GENES CONSULTING",
+                "runs": [
+                  {
+                    "text": "IN YOUR GENES CONSULTING",
+                    "fontSize": 11.0,
+                    "fontFamily": "Arial",
+                    "color": "#17B8C4",
+                    "bold": true,
+                    "underline": false,
+                    "strikethrough": false,
+                    "letterSpacing": 2.01
+                  }
+                ],
+                "lineSpacing": "100000%",
+                "endParaFontSize": 11.0
+              }
+            ],
+            "totalText": "IN YOUR GENES CONSULTING",
+            "marginLeft": 90000.0,
+            "marginRight": 90000.0,
+            "marginTop": 45000.0,
+            "marginBottom": 45000.0,
+            "verticalAlign": "ctr"
+          },
+          "presetGeometry": "rect",
+          "solidFill": {
+            "color": {
+              "scheme": "transparent"
+            }
+          },
+          "line": {
+            "width": 0.0,
+            "fill": {
+              "color": {
+                "scheme": "transparent"
               }
             }
           }

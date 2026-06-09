@@ -3,6 +3,10 @@ use crate::model::{Presentation, Slide, SlideNode, Position, Size, TextBody, Tex
 use crate::xml::XmlNode;
 use openxml_opc::OpcPackage;
 
+thread_local! {
+    static PARSE_IMAGES: std::cell::RefCell<Option<HashMap<String, Vec<u8>>>> = std::cell::RefCell::new(None);
+}
+
 #[allow(dead_code)]
 #[derive(Clone, Debug)]
 pub(crate) struct RelEntry {
@@ -571,17 +575,12 @@ fn extract_blip_embed(
             if let Some(rel) = slide_rels.get(&r_id) {
                 let target_path = resolve_target(slide_path, &rel.target);
                 if let Ok(bytes) = pkg.read_part(&target_path) {
-                    use base64::{Engine as _, engine::general_purpose};
-                    let encoded = general_purpose::STANDARD.encode(&bytes);
-                    let ext = target_path.split('.').last().unwrap_or("png").to_lowercase();
-                    let mime = match ext.as_str() {
-                        "jpg" | "jpeg" => "image/jpeg",
-                        "png" => "image/png",
-                        "gif" => "image/gif",
-                        "svg" => "image/svg+xml",
-                        _ => "image/png",
-                    };
-                    return Some(format!("data:{};base64,{}", mime, encoded));
+                    PARSE_IMAGES.with(|m| {
+                        if let Some(map) = &mut *m.borrow_mut() {
+                            map.insert(target_path.clone(), bytes);
+                        }
+                    });
+                    return Some(format!("scribe-image://{}", target_path));
                 }
             }
         }
@@ -1325,9 +1324,13 @@ pub(crate) fn parse_node(
     }
 }
 
-pub fn parse_presentation(path: &str) -> Result<Presentation, String> {
+pub fn parse_presentation(path: &str) -> Result<(Presentation, HashMap<String, Vec<u8>>), String> {
     let mut pkg = OpcPackage::open(path).map_err(|e| e.to_string())?;
     
+    PARSE_IMAGES.with(|m| {
+        *m.borrow_mut() = Some(HashMap::new());
+    });
+
     let pres_xml = pkg.read_part("ppt/presentation.xml").map_err(|e| e.to_string())?;
     let pres_str = String::from_utf8_lossy(&pres_xml);
     let root = XmlNode::parse(&pres_str)?;
@@ -1597,13 +1600,17 @@ pub fn parse_presentation(path: &str) -> Result<Presentation, String> {
         }
     }
     
+    let images = PARSE_IMAGES.with(|m| {
+        m.borrow_mut().take()
+    }).unwrap_or_default();
+
     // Remove the fallback so tests pass entirely on Native AST!
-    Ok(Presentation {
+    Ok((Presentation {
         width: px_width,
         height: px_height,
         slide_count,
         slides,
-    })
+    }, images))
 }
 
 #[cfg(test)]
@@ -2315,7 +2322,7 @@ mod background_renderer_tests {
         let ctx = StyleContext { theme: Some(&theme), master_styles: None, master_placeholders: &[], layout_placeholders: &[] };
         let mut pkg = openxml_opc::OpcPackage::open(format!("{}/tests/On_Target_Template.pptx", std::env::var("CARGO_MANIFEST_DIR").unwrap())).unwrap();
         let mut rels = HashMap::new();
-        let target_path = if missing_media { "../media/does_not_exist.png" } else { "../media/image-1002-1.png" };
+        let target_path = if missing_media { "../media/does_not_exist.png" } else { "../media/image1.png" };
         rels.insert("${rId}".to_string(), super::RelEntry {
             id: "${rId}".to_string(),
             rel_type: "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image".to_string(),

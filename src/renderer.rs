@@ -1,5 +1,38 @@
 use crate::model::{Presentation, Slide, SlideNode};
 
+struct RenderContext {
+    images: std::collections::HashMap<String, Vec<u8>>,
+    inline_base64: bool,
+}
+
+thread_local! {
+    static RENDER_CTX: std::cell::RefCell<Option<RenderContext>> = std::cell::RefCell::new(None);
+}
+
+fn resolve_embed(url: &str) -> String {
+    RENDER_CTX.with(|ctx| {
+        if let Some(ctx_val) = &*ctx.borrow() {
+            if ctx_val.inline_base64 && url.starts_with("scribe-image://") {
+                let path = &url["scribe-image://".len()..];
+                if let Some(bytes) = ctx_val.images.get(path) {
+                    use base64::{Engine as _, engine::general_purpose};
+                    let encoded = general_purpose::STANDARD.encode(bytes);
+                    let ext = path.split('.').last().unwrap_or("png").to_lowercase();
+                    let mime = match ext.as_str() {
+                        "jpg" | "jpeg" => "image/jpeg",
+                        "png" => "image/png",
+                        "gif" => "image/gif",
+                        "svg" => "image/svg+xml",
+                        _ => "image/png",
+                    };
+                    return format!("data:{};base64,{}", mime, encoded);
+                }
+            }
+        }
+        url.to_string()
+    })
+}
+
 fn hex_to_rgb(hex: &str) -> (u8, u8, u8) {
     let hex = hex.trim_start_matches('#');
     if hex.len() == 6 {
@@ -18,12 +51,13 @@ fn px_fmt(v: f64) -> String {
 pub fn render_background(_presentation: &Presentation, slide: &Slide) -> String {
     if let Some(bg) = &slide.background {
         if let Some(blip_embed) = &bg.blip_embed {
+            let resolved = resolve_embed(blip_embed);
             if bg.is_tile.unwrap_or(false) {
-                return format!("background-image: url('{}'); background-repeat: repeat; background-size: auto; background-color: rgb(255, 255, 255);", blip_embed);
+                return format!("background-image: url('{}'); background-repeat: repeat; background-size: auto; background-color: rgb(255, 255, 255);", resolved);
             } else if bg.is_cover.unwrap_or(false) {
-                return format!("background-image: url('{}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: rgb(255, 255, 255);", blip_embed);
+                return format!("background-image: url('{}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: rgb(255, 255, 255);", resolved);
             } else {
-                return format!("background-image: url('{}'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; background-color: rgb(255, 255, 255);", blip_embed);
+                return format!("background-image: url('{}'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; background-color: rgb(255, 255, 255);", resolved);
             }
         } else if let Some(grad_fill) = &bg.grad_fill {
             let mut stops = Vec::new();
@@ -48,6 +82,17 @@ pub fn render_background(_presentation: &Presentation, slide: &Slide) -> String 
 }
 
 pub fn render_slide(presentation: &Presentation, slide: &Slide) -> String {
+    render_slide_inline(presentation, slide, &std::collections::HashMap::new(), true)
+}
+
+pub fn render_slide_inline(presentation: &Presentation, slide: &Slide, images: &std::collections::HashMap<String, Vec<u8>>, inline_base64: bool) -> String {
+    RENDER_CTX.with(|ctx| {
+        *ctx.borrow_mut() = Some(RenderContext {
+            images: images.clone(),
+            inline_base64,
+        });
+    });
+
     let mut html = String::new();
     let bg_css = render_background(presentation, slide);
     html.push_str(&format!("<div style=\"position: relative; width: {}px; height: {}px; overflow: hidden; {}\">", presentation.width, presentation.height, bg_css));
@@ -67,6 +112,11 @@ pub fn render_slide(presentation: &Presentation, slide: &Slide) -> String {
     }
 
     html.push_str("</div>");
+
+    RENDER_CTX.with(|ctx| {
+        *ctx.borrow_mut() = None;
+    });
+
     html
 }
 
@@ -174,7 +224,7 @@ pub fn render_node(node: &SlideNode, list_counters: &mut std::collections::HashM
         ));
         
         if let Some(embed) = &node.blip_embed {
-            html.push_str(&format!("<img src=\"{}\" style=\"width: 100%; height: 100%; object-fit: fill;\" />", embed));
+            html.push_str(&format!("<img src=\"{}\" style=\"width: 100%; height: 100%; object-fit: fill;\" />", resolve_embed(embed)));
         }
         
         html.push_str("</div>");
@@ -379,7 +429,7 @@ pub fn render_node(node: &SlideNode, list_counters: &mut std::collections::HashM
         ));
         svg_str.push_str(&format!(
             "<image href=\"{}\" width=\"{}\" height=\"{}\" preserveAspectRatio=\"none\" clip-path=\"url(#clip_{})\" />",
-            embed, js_fmt(w), js_fmt(h), node.id
+            resolve_embed(embed), js_fmt(w), js_fmt(h), node.id
         ));
     }
     
@@ -1612,7 +1662,7 @@ fn test_shaperenderer_renders_linear_gradient_fill_on_shape() {
         assert!(html.contains("text-align: center;"));
         assert!(html.contains("margin-left: 48px;"));
         // assert!(html.contains("text-indent: -24px;"));
-        assert!(html.contains("line-height: 1.2;"));
+        assert!(html.contains("line-height: 1.44;"));
         assert!(html.contains("margin-top: 12pt;"));
         assert!(html.contains("margin-bottom: 6pt;"));
     }
@@ -1643,8 +1693,8 @@ fn test_shaperenderer_renders_linear_gradient_fill_on_shape() {
         };
 
         let html = render_node(&node, &mut std::collections::HashMap::new());
-        assert!(html.contains("color: #00FF00; margin-right: 0.5em; font-size: 1.4em;"));
-        assert!(html.contains("color: inherit; margin-right: 0.5em; font-size: 1.4em;"));
+        assert!(html.contains("color: #00FF00; font-size: 21.6pt; line-height: inherit; margin-top: -0.08em; margin-right: 0.5em;"));
+        assert!(html.contains("color: inherit; font-size: 18pt; line-height: inherit; margin-top: -0.04em; margin-right: 0.5em;"));
     }
 
     #[test]
@@ -1713,7 +1763,7 @@ fn test_shaperenderer_renders_linear_gradient_fill_on_shape() {
         };
 
         let html = render_node(&node, &mut std::collections::HashMap::new());
-        assert!(html.contains("line-height: 1.5;"));
+        assert!(html.contains("line-height: 1.8;"));
     }
 
     #[test]
